@@ -140,31 +140,33 @@ if (document.querySelector('.faq--item')) {
 /* On Scroll Background Change JS Start */
 
 document.addEventListener("DOMContentLoaded", function () {
+    if (document.querySelector('.meet__golao-main')) {
 
-    const body = document.body;
-    const meetSection = document.querySelector(".meet__golao-main");
-    const authorSection = document.querySelector(".author__main");
+        const body = document.body;
+        const meetSection = document.querySelector(".meet__golao-main");
+        const authorSection = document.querySelector(".author__main");
 
-    body.style.backgroundColor = "#374a34";
+        body.style.backgroundColor = "#374a34";
 
-    function updateBackground() {
+        function updateBackground() {
 
-        const meetRect = meetSection.getBoundingClientRect();
-        const authorRect = authorSection.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
+            const meetRect = meetSection.getBoundingClientRect();
+            const authorRect = authorSection.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
 
-        if (authorRect.top <= windowHeight * 0.2) {
-            body.style.backgroundColor = "#202633";
+            if (authorRect.top <= windowHeight * 0.2) {
+                body.style.backgroundColor = "#202633";
+            }
+            else if (meetRect.top <= windowHeight * 0.1) {
+                body.style.backgroundColor = "#451930";
+            }
+            else {
+                body.style.backgroundColor = "#374a34";
+            }
         }
-        else if (meetRect.top <= windowHeight * 0.1) {
-            body.style.backgroundColor = "#451930";
-        }
-        else {
-            body.style.backgroundColor = "#374a34";
-        }
+
+        window.addEventListener("scroll", updateBackground);
     }
-
-    window.addEventListener("scroll", updateBackground);
 });
 
 /* On Scroll Background Change JS End */
@@ -281,6 +283,8 @@ if (document.querySelector('.creator--form__inner')) {
 
 /* Creator Form JS End */
 
+/* Categories Select JS Start */
+
 const elements = document.querySelectorAll('.js-example-tags');
 
 elements.forEach(el => {
@@ -289,3 +293,70 @@ elements.forEach(el => {
         duplicateItemsAllowed: false
     });
 });
+
+/* Categories Select JS End */
+
+/* Categories Filter Section JS Start */
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (document.querySelector('.categories--filter--item')) {
+
+        const categorySelect = document.getElementById("categoryFilter");
+        const sortSelect = document.getElementById("sortFilter");
+        const items = document.querySelectorAll(".categories--filter--item");
+
+        function filterItems() {
+
+            const categoryOption = categorySelect.options[categorySelect.selectedIndex];
+            const category = categoryOption.getAttribute("aria-label");
+
+            const sortOption = sortSelect.options[sortSelect.selectedIndex];
+            const sort = sortOption.getAttribute("aria-label");
+
+            items.forEach(item => {
+
+                const matchCategory = (category === "all" || item.classList.contains(category));
+                const matchSort = item.classList.contains(sort);
+
+                if (matchCategory && matchSort) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+
+            });
+
+        }
+
+        categorySelect.addEventListener("change", filterItems);
+        sortSelect.addEventListener("change", filterItems);
+    }
+
+});
+
+/* Categories Filter Section JS End */
+
+/* Marquee Section JS Start */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const track = document.querySelector(".marquee--track");
+    const slides = document.querySelectorAll(".marquee--slide");
+
+    slides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        track.appendChild(clone);
+    });
+
+    const totalWidth = track.scrollWidth / 2;
+
+    gsap.to(track, {
+        x: -totalWidth,
+        duration: 30,
+        ease: "none",
+        repeat: -1
+    });
+
+});
+
+/* Marquee Section JS End */

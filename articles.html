@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
 
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
 </head>
 
@@ -173,12 +174,585 @@
                 <div class="categories--filter--top">
                     <div class="categories--filter--top__inner">
                         <div class="categories--filter--left">
-                            <select class="form-control">
-                                <option selected="selected">orange</option>
-                                <option>white</option>
-                                <option>purple</option>
-                            </select>
+                            <div class="categories--filter">
+                                <select id="categoryFilter" class="js-example-tags form-control">
+                                    <option selected="selected" aria-label="all">All Categories</option>
+                                    <option aria-label="web-design">Web Design</option>
+                                    <option aria-label="branding">Branding</option>
+                                    <option aria-label="design-tools">Design Tools</option>
+                                    <option aria-label="graphic-design">Graphic Design</option>
+                                    <option aria-label="coding-tutorials">Coding Tutorials</option>
+                                    <option aria-label="cybersecurity">Cybersecurity</option>
+                                    <option aria-label="blockchain">Blockchain</option>
+                                    <option aria-label="mobile-technology">Mobile Technology</option>
+                                    <option aria-label="ai-innovations">AI Innovations</option>
+                                    <option aria-label="gadgets">Gadgets</option>
+                                </select>
+                            </div>
+
+                            <div class="categories--search">
+                                <a href="javascript:;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" style="color: rgb(51, 51, 51);"><path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z" fill="currentColor"></path></svg>
+                                </a>
+                            </div>
                         </div>
+
+                        <div class="categories--filter--right">
+                            <div class="categories--filter--right__inner">
+                                <span>Sort by:</span>
+                                <div class="categories--filter">
+                                    <select id="sortFilter" class="js-example-tags form-control">
+                                        <option aria-label="oldest" selected="selected">Oldest</option>
+                                        <option aria-label="newest">Newest</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="categories--filter--content">
+                    <div class="categories--filter--content__wrapper">
+                        <a href="javascript:;" class="categories--filter--item web-design oldest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-1.jpg" alt="categories-1">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>AI Innovations</span>
+                                            <span>Coding Tutorials</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Key Strategies for Effective Software Reviews</h2>
+                                            <p>Learn essential strategies for conducting thorough and effective software reviews to ensure quality and performance.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>May 7, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>Fatima Al-Sayed</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item branding newest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-2.jpg" alt="categories-2">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>Mobile Technology</span>
+                                            <span>Gadgets</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Innovations in IoT: Transforming Everyday Life</h2>
+                                            <p>Investigate how IoT innovations are changing daily life, from smart homes to connected health devices.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>April 21, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>Andrii Shevchenko</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item design-tools oldest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-3.jpg" alt="categories-3">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>Gadgets</span>
+                                            <span>Mobile Technology</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Navigating the latest trends in internet of things</h2>
+                                            <p>Delve into the latest IoT trends, exploring their applications in smart homes and industries, improving connectivity and efficiency in daily life.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>March 11, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>David McCormick</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item graphic-design newest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-4.jpg" alt="categories-4">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>Graphic Design</span>
+                                            <span>Design Tools</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Trends in Graphic Design: What to Watch</h2>
+                                            <p>Explore the latest trends in graphic design that are shaping visual communication, including minimalism and sustainability.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>March 8, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>Fatima Al-Sayed</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item coding-tutorials newest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-5.jpg" alt="categories-5">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>AI Innovations</span>
+                                            <span>Coding Tutorials</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Key Strategies for Effective Software Reviews</h2>
+                                            <p>Learn essential strategies for conducting thorough and effective software reviews to ensure quality and performance.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>May 7, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>Fatima Al-Sayed</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item cybersecurity oldest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-6.jpg" alt="categories-6">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>Mobile Technology</span>
+                                            <span>Gadgets</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Innovations in IoT: Transforming Everyday Life</h2>
+                                            <p>Investigate how IoT innovations are changing daily life, from smart homes to connected health devices.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>April 21, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>Andrii Shevchenko</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item blockchain newest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-7.jpg" alt="categories-7">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>Gadgets</span>
+                                            <span>Mobile Technology</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Navigating the latest trends in internet of things</h2>
+                                            <p>Delve into the latest IoT trends, exploring their applications in smart homes and industries, improving connectivity and efficiency in daily life.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>March 11, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>David McCormick</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item mobile-technology newest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-8.jpg" alt="categories-8">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>Graphic Design</span>
+                                            <span>Design Tools</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Trends in Graphic Design: What to Watch</h2>
+                                            <p>Explore the latest trends in graphic design that are shaping visual communication, including minimalism and sustainability.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>March 8, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>Fatima Al-Sayed</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item ai-innovations oldest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-9.jpg" alt="categories-9">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>AI Innovations</span>
+                                            <span>Coding Tutorials</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Key Strategies for Effective Software Reviews</h2>
+                                            <p>Learn essential strategies for conducting thorough and effective software reviews to ensure quality and performance.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>May 7, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>Fatima Al-Sayed</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item gadgets oldest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-10.jpg" alt="categories-10">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>Mobile Technology</span>
+                                            <span>Gadgets</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Innovations in IoT: Transforming Everyday Life</h2>
+                                            <p>Investigate how IoT innovations are changing daily life, from smart homes to connected health devices.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>April 21, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>Andrii Shevchenko</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item web-design newest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-11.jpg" alt="categories-11">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>Gadgets</span>
+                                            <span>Mobile Technology</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Navigating the latest trends in internet of things</h2>
+                                            <p>Delve into the latest IoT trends, exploring their applications in smart homes and industries, improving connectivity and efficiency in daily life.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>March 11, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>David McCormick</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item design-tools oldest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-12.jpg" alt="categories-12">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>Graphic Design</span>
+                                            <span>Design Tools</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Trends in Graphic Design: What to Watch</h2>
+                                            <p>Explore the latest trends in graphic design that are shaping visual communication, including minimalism and sustainability.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>March 8, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>Fatima Al-Sayed</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item coding-tutorials newest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-13.jpg" alt="categories-13">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>AI Innovations</span>
+                                            <span>Coding Tutorials</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Key Strategies for Effective Software Reviews</h2>
+                                            <p>Learn essential strategies for conducting thorough and effective software reviews to ensure quality and performance.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>May 7, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>Fatima Al-Sayed</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item branding oldest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-14.jpg" alt="categories-14">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>Mobile Technology</span>
+                                            <span>Gadgets</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Innovations in IoT: Transforming Everyday Life</h2>
+                                            <p>Investigate how IoT innovations are changing daily life, from smart homes to connected health devices.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>April 21, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>Andrii Shevchenko</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="categories--filter--item blockchain oldest">
+                            <div class="filter--item--inner">
+                                <div class="filter--item--image">
+                                    <img src="assets/images/categories-15.jpg" alt="categories-15">
+                                </div>
+
+                                <div class="filter--item--content--col">
+                                    <div class="filter--item--content__inner">
+                                        <div class="filter--item--button__wrapper">
+                                            <span>Gadgets</span>
+                                            <span>Mobile Technology</span>
+                                        </div>
+
+                                        <div class="filter--item--content">
+                                            <h2>Navigating the latest trends in internet of things</h2>
+                                            <p>Delve into the latest IoT trends, exploring their applications in smart homes and industries, improving connectivity and efficiency in daily life.</p>
+                                        </div>
+
+                                        <div class="filter--item--date__wrapper">
+                                            <div class="filter--item--date">
+                                                <h3>DATE</h3>
+                                                <h4>March 11, 2025</h4>
+                                            </div>
+
+                                            <div class="filter--item--author">
+                                                <h3>AUTHOR</h3>
+                                                <h4>David McCormick</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
 
                     </div>
                 </div>
@@ -384,6 +958,8 @@
     </footer>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
