@@ -2972,4 +2972,372 @@ button.btn--form--submit:hover:before {
     color: var(--primary-bg-color);
 }
 
+.articles--nexprev--button__wrapper {
+    padding: 80px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.articles--content--col--right {
+    width: 40%;
+    padding: 0 0 0 120px;
+}
+
+.articles--content--sidebar {
+    position: sticky;
+    top: 160px;
+}
+
+.articles--content--sidebar h2 {
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.3;
+    font-weight: 400;
+    margin: 0 0 32px 0;
+    width: 100%;
+}
+
+.articles--sidebar--top {
+    padding: 0 0 32px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.articles--sidebar--top a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.articles--sidebar--image {
+    width: 80px;
+    height: 80px;
+    background-color: #202633;
+    border: 1px solid var(--primary-bg-color);
+    border-radius: 50%;
+}
+
+.articles--sidebar--image img {
+    width: 100%;
+    height: 100%;
+}
+
+.articles--sidebar--info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.articles--sidebar--info h3 {
+    font-size: 18px;
+    color: var(--color-white);
+    line-height: 1.3;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+.articles--sidebar--info p {
+    font-size: 14px;
+    color: var(--primary-bg-color);
+    line-height: 1.2;
+    font-weight: 400;
+    margin: 0;
+}
+
+.articles--sidebar--bottom {
+    padding: 30px 0 0 0;
+}
+
+.articles--sidebar--subscription {
+    position: relative;
+}
+
+.articles--sidebar--subscription input {
+    padding: 16px 26px;
+    border: 1px solid var(--color-white);
+    background-color: transparent;
+    font-size: 16px;
+    color: var(--color-white);
+    line-height: 2;
+    font-weight: 400;
+    border-radius: 32px;
+    width: 100%;
+    outline: none;
+}
+
+.articles--sidebar--subscription input::placeholder {
+    color: var(--color-white);
+}
+
+.articles--sidebar--subscription button {
+    width: 54px;
+    height: 54px;
+    background-color: var(--primary-bg-color);
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    left: auto;
+    right: 6px;
+    cursor: pointer;
+}
+
+.articles--sidebar--subscription button svg {
+    width: 24px !important;
+    height: 24px !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.articles--sidebar--subscription button:hover svg {
+    transform: rotate(-30deg);
+}
+
+.articles-detail-page .recent__articles .title--left h2 {
+    font-size: 64px;
+    max-width: 100%;
+    margin: 0;
+}
+
+.bg-magenta .recent__articles--footer__inner:before {
+    background-color: #451930;
+}
+
 /* Articles Inner Page CSS End */
+
+/* Authors Page CSS Start */
+
+.author--list--sec {
+    padding: 80px 0px 150px 0px;
+}
+
+.author--list--inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.author--list--item {
+    width: calc(33.3% - 7px);
+}
+
+.author--list--item__inner {
+    padding: 20px;
+    border: 1px solid #f0ff8b;
+    border-radius: 10px;
+    background-color: #f0ff8b;
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.author--list--item__inner>a {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+}
+
+.author--list--image {
+    display: flex;
+    width: 160px;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 40px 0;
+}
+
+.author--list--image img {
+    width: 100%;
+    height: 100%;
+}
+
+.author--list--info h3 {
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.author--list--info h2 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #000;
+    margin: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.author--list--description {
+    padding: 40px 0 0 0;
+}
+
+.author--list--description p {
+    font-size: 18px;
+    color: #000;
+    line-height: 1.3;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.author--list--description ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.author--list--description ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.author--list--description ul li a svg {
+    width: 32px !important;
+    height: 32px !important;
+    fill: #000 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.author--list--description ul li {
+    height: 32px;
+    width: 32px;
+    display: flex;
+}
+
+.author--list--item__inner:hover>a {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    left: 0;
+    top: 0;
+}
+
+.author--list--item__inner:hover .author--list--info h3,
+.author--list--item__inner:hover .author--list--info h2,
+.author--list--item__inner:hover .author--list--description p {
+    color: #fff;
+}
+
+.author--list--item__inner:hover .author--list--description ul li a svg {
+    fill: var(--primary-bg-color) !important;
+}
+
+.author--list--button {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: -80px;
+}
+
+.container--fluid {
+    width: 100%;
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+/* Authors Page CSS End */
+
+/* Authors Details Page CSS Start */
+
+.authors--details--banner {
+    padding: 130px 80px 80px 80px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.authors--details--banner__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.authors--details--banner--first--row__inner {
+    display: flex;
+    align-items: center;
+    gap: 140px;
+}
+
+.authors--details--banner--first--row__inner h1,
+.authors--details--banner--second--row h1 {
+    font-size: 180px;
+    color: var(--color-white);
+    font-weight: 700;
+    will-change: transform;
+    transform: translateX(0);
+    margin: 0;
+}
+
+.authors--details--banner--second--row h1 {
+    text-align: right
+}
+
+.authors--details--banner--row--content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 310px;
+}
+
+.authors--details--banner--row--content h2 {
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--primary-bg-color);
+    font-weight: 400;
+    margin: 0;
+}
+
+.authors--details--banner--row--content p {
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--color-white);
+    font-weight: 400;
+    margin: 0;
+}
+
+.authors--details--banner--row--content ul {
+    margin: 0;
+    padding: 10px 0 0 0;
+    list-style: none;
+    display: flex;
+    gap: 14px;
+}
+
+.authors--details--banner--row--content ul a {
+    display: flex;
+}
+
+.authors--details--banner--row--content ul a svg {
+    width: 32px !important;
+    height: 32px !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.authors--details--banner--row--content ul a:hover svg {
+    fill: var(--color-white) !important;
+}
+
+/* Authors Details Page CSS End */

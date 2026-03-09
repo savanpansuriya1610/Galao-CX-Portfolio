@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Header JS Start */
 
-document.querySelectorAll('.header__menu a').forEach(link => {
+document.querySelectorAll('[aria-label]').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -339,24 +339,63 @@ document.addEventListener("DOMContentLoaded", function () {
 /* Marquee Section JS Start */
 
 document.addEventListener("DOMContentLoaded", function () {
+    if (document.querySelector('.marquee--main')) {
 
-    const track = document.querySelector(".marquee--track");
-    const slides = document.querySelectorAll(".marquee--slide");
+        const track = document.querySelector(".marquee--track");
+        const slides = document.querySelectorAll(".marquee--slide");
 
-    slides.forEach(slide => {
-        const clone = slide.cloneNode(true);
-        track.appendChild(clone);
-    });
+        slides.forEach(slide => {
+            const clone = slide.cloneNode(true);
+            track.appendChild(clone);
+        });
 
-    const totalWidth = track.scrollWidth / 2;
+        const totalWidth = track.scrollWidth / 2;
 
-    gsap.to(track, {
-        x: -totalWidth,
-        duration: 30,
-        ease: "none",
-        repeat: -1
-    });
+        gsap.to(track, {
+            x: -totalWidth,
+            duration: 30,
+            ease: "none",
+            repeat: -1
+        });
+    }
 
 });
 
 /* Marquee Section JS End */
+
+/* Authors List Section JS Start */
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (document.querySelector('.author--list--sec')) {
+
+        const items = document.querySelectorAll(".author--list--item");
+        const btn = document.querySelector(".author--list--button a.btn");
+
+        let visibleCount = 6;
+
+        items.forEach((item, index) => {
+            if (index >= visibleCount) {
+                item.style.display = "none";
+            }
+        });
+
+        btn.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            let nextItems = 3;
+
+            for (let i = visibleCount; i < visibleCount + nextItems && i < items.length; i++) {
+                items[i].style.display = "block";
+            }
+
+            visibleCount += nextItems;
+
+            if (visibleCount >= items.length) {
+                btn.style.display = "none";
+            }
+        });
+    }
+
+});
+
+/* Authors List Section JS End */
