@@ -399,3 +399,41 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* Authors List Section JS End */
+
+/* Author Details Banner Section JS Start */
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Emma
+gsap.fromTo(
+    ".authors--details--banner--first--row__inner h1",
+    { x: 0 },
+    {
+        x: -400,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".authors--details--banner",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+        }
+    }
+);
+
+// Harrison
+gsap.fromTo(
+    ".authors--details--banner--second--row h1",
+    { x: 0 },
+    {
+        x: 400,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".authors--details--banner",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+        }
+    }
+);
+
+/* Author Details Banner Section JS End */

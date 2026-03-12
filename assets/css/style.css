@@ -3340,4 +3340,88 @@ button.btn--form--submit:hover:before {
     fill: var(--color-white) !important;
 }
 
+.authors--details--banner--first--row__inner h1 {
+    margin-left: 200px;
+}
+
+.authors--details--banner--second--row h1 {
+    margin-right: 200px;
+}
+
+.authors--full--intro {
+    padding: 120px 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.authors--full--inner {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    flex-wrap: wrap;
+}
+
+.author--intro--col {
+    width: calc(65% - 60px);
+}
+
+.author--intro--image--col {
+    width: calc(35% - 60px);
+}
+
+.author--intro--col h2 {
+    font-size: 120px;
+    line-height: 1.3;
+    color: var(--primary-bg-color);
+    font-weight: 400;
+    margin: 0 0 20px 0;
+}
+
+.author--intro--col p {
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--color-white);
+    font-weight: 400;
+    margin: 0 0 20px 0;
+}
+
+.author--intro--col p:last-child {
+    margin: 0;
+}
+
+.author--intro--image {
+    background-color: var(--primary-bg-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.author--intro--image img {
+    width: 100%;
+    height: 100%;
+}
+
+.works--main {
+    position: relative;
+    width: 100%;
+    padding: 120px 0;
+}
+
+.work--title {
+    margin: 0 0 100px 0;
+}
+
+.work--title h2 {
+    width: 100%;
+    font-size: 120px;
+    color: var(--primary-bg-color);
+    line-height: 1.3;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+}
+
 /* Authors Details Page CSS End */
