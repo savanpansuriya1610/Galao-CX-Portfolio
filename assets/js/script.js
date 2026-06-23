@@ -33,43 +33,50 @@ if (document.querySelector('.banner__main')) {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    let tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".banner__main",
-            start: "top top",
-            end: "+=1500",
-            scrub: true,
-            pin: true
-        }
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 768px)", () => {
+
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".banner__main",
+                start: "top top",
+                end: "+=1500",
+                scrub: true,
+                pin: true
+            }
+        });
+
+        tl.to(".banner__title.left__hide", {
+            x: "-220%"
+        }, 0)
+
+            .to(".banner__title.right__hide", {
+                x: "220%"
+            }, 0)
+
+            .to(".banner__content .banner__title:first-child", {
+                scale: 1.5,
+                y: 40
+            }, 0)
+
+            .to(".banner__content .banner__title:last-child", {
+                scale: 1.5,
+                y: -40
+            }, 0)
+
+            .to(".banner__search", {
+                y: "800%"
+            }, 0)
+
+            .to(".banner__intro", {
+                bottom: 0,
+                opacity: 1,
+                transform: "none",
+            }, 0);
+
     });
 
-    tl.to(".banner__title.left__hide", {
-        x: "-220%"
-    }, 0)
-
-        .to(".banner__title.right__hide", {
-            x: "220%"
-        }, 0)
-
-        .to(".banner__content .banner__title:first-child", {
-            scale: 1.5,
-            y: 40
-        }, 0)
-
-        .to(".banner__content .banner__title:last-child", {
-            scale: 1.5,
-            y: -40
-        }, 0)
-
-        .to(".banner__search", {
-            y: "800%"
-        }, 0)
-
-        .to(".banner__intro", {
-            bottom: 0,
-            opacity: 1,
-            transform: "none",
-        }, 0);
 }
 
 /* Banner Section JS End */
@@ -402,38 +409,112 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Author Details Banner Section JS Start */
 
-gsap.registerPlugin(ScrollTrigger);
+if (document.querySelector('.authors--details--banner')) {
 
-// Emma
-gsap.fromTo(
-    ".authors--details--banner--first--row__inner h1",
-    { x: 0 },
-    {
-        x: -400,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".authors--details--banner",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true
-        }
-    }
-);
+    gsap.registerPlugin(ScrollTrigger);
 
-// Harrison
-gsap.fromTo(
-    ".authors--details--banner--second--row h1",
-    { x: 0 },
-    {
-        x: 400,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".authors--details--banner",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true
+    gsap.fromTo(
+        ".authors--details--banner--first--row__inner h1",
+        { x: 0 },
+        {
+            x: -400,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".authors--details--banner",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true
+            }
         }
-    }
-);
+    );
+
+    gsap.fromTo(
+        ".authors--details--banner--second--row h1",
+        { x: 0 },
+        {
+            x: 400,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".authors--details--banner",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true
+            }
+        }
+    );
+}
 
 /* Author Details Banner Section JS End */
+
+/* Load More Button Click JS Start */
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (document.querySelector('.works--list__inner')) {
+        const items = document.querySelectorAll(".works--list--item");
+        const button = document.querySelector(".works--list--button__wrapper a");
+
+        items.forEach((item, index) => {
+            if (index >= 4) {
+                item.style.display = "none";
+            }
+        });
+
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            items.forEach(item => {
+                item.style.display = "flex";
+            });
+
+            this.parentElement.style.display = "none";
+        });
+    }
+});
+
+/* Load More Button Click JS End */
+
+/* Image Scale JS Start */
+
+if (document.querySelector('.works--list__inner')) {
+    const items = document.querySelectorAll('.works--list--item');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    items.forEach(item => {
+        observer.observe(item);
+    });
+}
+
+/* Image Scale JS End */
+
+/* Hemberger Menu JS Start */
+
+if (document.querySelector('.header__inner')) {
+    const hamburgerIcon = document.querySelector('.header--hemberger--icon');
+    const headerInner = document.querySelector('.header__inner');
+    const nav = document.querySelector('.header__nav');
+
+    hamburgerIcon.addEventListener('click', () => {
+        headerInner.classList.toggle('active--hemberger--menu');
+
+        if (headerInner.classList.contains('active--hemberger--menu')) {
+            nav.style.height = nav.scrollHeight + "px";
+            nav.style.borderWidth = "1px";
+        } else {
+            nav.style.height = "0px";
+            nav.style.borderWidth = "0";
+        }
+    });
+}
+
+/* Hemberger Menu JS End */
