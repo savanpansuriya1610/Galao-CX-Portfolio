@@ -3641,6 +3641,54 @@ button.btn--form--submit:hover:before {
     }
 }
 
+@media screen and (max-width: 1440px) {
+    .authors--details--banner--first--row__inner {
+        gap: 80px;
+    }
+
+    .authors--details--banner--first--row__inner h1,
+    .authors--details--banner--second--row h1 {
+        font-size: 120px;
+    }
+
+    .author--intro--col h2,
+    .work--title h2 {
+        font-size: 80px;
+    }
+
+    .works--list--content--col {
+        width: calc(45% - 5px);
+    }
+
+    .works--list--image--col {
+        width: calc(55% - 5px);
+    }
+
+    .work--title {
+        margin: 0 0 60px 0;
+    }
+
+    .authors--full--inner {
+        gap: 80px;
+    }
+
+    .author--intro--col {
+        width: calc(65% - 40px);
+    }
+
+    .author--intro--image--col {
+        width: calc(35% - 40px);
+    }
+
+    .works--list--item {
+        min-height: 70vh;
+    }
+
+    .works--list--content--top h2 {
+        font-size: 40px;
+    }
+}
+
 @media screen and (max-width: 1299px) {
     .banner--item__left__one {
         left: -350px;
@@ -4025,6 +4073,10 @@ button.btn--form--submit:hover:before {
     .author__main,
     .faq__main {
         padding: 80px 0 80px 0;
+    }
+
+    .recent__articles {
+        padding-bottom: 60px;
     }
 
     .categories__main,
@@ -4422,6 +4474,78 @@ button.btn--form--submit:hover:before {
 
     .author--list--item {
         width: calc(50% - 5px);
+    }
+
+    .authors--details--banner--first--row__inner {
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .authors--details--banner--first--row__inner h1,
+    .authors--details--banner--second--row h1 {
+        font-size: 80px;
+    }
+
+    .authors--full--inner {
+        gap: 40px;
+    }
+
+    .author--intro--col {
+        width: calc(65% - 20px);
+    }
+
+    .author--intro--image--col {
+        width: calc(35% - 20px);
+    }
+
+    .works--list--content__inner {
+        padding: 20px;
+    }
+
+    .author--intro--col h2,
+    .work--title h2 {
+        font-size: 60px;
+    }
+
+    .authors--full--intro {
+        padding: 80px 0;
+        height: 100%;
+    }
+
+    .works--main {
+        padding: 0px 0 60px 0;
+    }
+
+    .works--list--content--top h2 {
+        font-size: 34px;
+    }
+
+    .works--list--item {
+        min-height: 60vh;
+    }
+
+    .works--list--content--col {
+        width: calc(50% - 5px);
+    }
+
+    .works--list--image--col {
+        width: calc(50% - 5px);
+    }
+
+    .authors--details--banner {
+        padding: 100px 40px 80px 40px;
+    }
+
+    .authors--details--banner--first--row__inner h1 {
+        margin-left: 0px;
+    }
+
+    .authors--details--banner--second--row h1 {
+        margin-right: 220px;
+    }
+
+    .works--list--button__wrapper {
+        margin: 40px 0 0 0;
     }
 }
 
@@ -4886,6 +5010,87 @@ button.btn--form--submit:hover:before {
 
     .container--fluid {
         padding: 0 20px;
+    }
+
+    .authors--details--banner {
+        padding: 170px 20px 80px 20px;
+        height: 100%;
+    }
+
+    .authors--details--banner--first--row__inner h1 {
+        margin-left: 0px;
+        transform: none !important;
+    }
+
+    .authors--details--banner--second--row h1 {
+        transform: none !important;
+        margin: 0;
+    }
+
+    .authors--details--banner--row--content {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .authors--details--banner--row--content p {
+        text-align: center;
+    }
+
+    .authors--details--banner--first--row__inner h1,
+    .authors--details--banner--second--row h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .authors--full--inner {
+        flex-direction: column-reverse;
+    }
+
+    .author--intro--col {
+        width: calc(100% - 0px);
+    }
+
+    .author--intro--image--col {
+        width: calc(50% - 0px);
+    }
+
+    .works--list--item {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .works--list--content--col,
+    .works--list--image--col {
+        width: calc(100% - 0px);
+    }
+
+    .works--list--content__inner {
+        min-height: 50vh;
+    }
+
+    .works--list--image {
+        height: 40vh;
+    }
+
+    .works--list--content--top label {
+        padding: 8px 16px;
+    }
+
+    .works--list--content--top {
+        gap: 20px;
+    }
+
+    .works--list--content--top h2 {
+        font-size: 28px;
+    }
+
+    .work--title {
+        margin: 0 0 40px 0;
+    }
+
+    .author--intro--col h2,
+    .work--title h2 {
+        font-size: 50px;
     }
 }
 
